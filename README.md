@@ -18,13 +18,13 @@
         後にも様々な模型を紹介しますが、特にこのイジング模型と呼ばれるモデルでは簡単な割に非常によく温度による磁性の相転移を再現し、常磁性体の性質をうまくシミュレーションするモデルとなります。
     </p>
     <p>
-        Ising Model is an ideal system which consists of only 1/2 spins.
+        Ising Model is an ideal system that consists of only 1/2 spins.
         The spins are arranged in equidistance from each other, making themselves lattice field.
         Since each spins interact with each other due to the magnetic moments, spin pairs pointing opposite directions tend to align their directions.
         <br>
-        In computer simulation, Monte Carlo method (Metropolis-Hastings algorithm) is used for example to reproduce this "flipping" phenomenon.
-        ( Sometimes Rejection sampling method, Molecular dynamics method are used instead, but we will skip that since we don't use the algorithms here. )
-        More specifically, this algorithm is used to calculate the "probability of flipping" of exp(-beta E) due to the fact that the system obeys Gibbs-Boltzmann distribution.
+        In the computer simulation, the Monte Carlo method (Metropolis-Hastings algorithm) is used for example to reproduce this "flipping" phenomenon.
+        ( Sometimes the Rejection sampling method, Molecular dynamics method are used instead, but we will skip that since we don't use the algorithms here. )
+        More specifically, this algorithm is used to calculate the "probability of flipping" of exp(-beta E) since the system obeys Gibbs-Boltzmann distribution.
         <br>
         We will introduce other models later, but this simple model reproduces the phase transition of magnetization very well, simulating the basic properties of ferromagnetic materials.
     </p>
@@ -73,8 +73,8 @@
     </p>
     <p>
         As described above, the Ising model is a lattice system with 1/2 spins with an exact solution when there's no external magnetic field.
-        The lattice system can be extended to 3D lattice system, with no exact solution found ever.
-        It is also a good example to show the usefulness of computer simulations in a sense of providing the approximated solution even when exact solution doesn't exist.
+        The lattice system can be extended to a 3D lattice system, with no exact solution found ever.
+        It is also a good example to show the usefulness of computer simulations in a sense of providing the approximated solution even when the exact solution doesn't exist.
     </p>
 </div>
 
@@ -116,12 +116,12 @@
         シュミレーションではスピンの向きを(cosX, sinX)として表現し、スピンをフリップさせることは鏡像操作を行うことで実現しています。
     </p>
     <p>
-        XY model is different from Ising model, in a sense of spins having continuous directions.
+        XY model is different from the Ising model, in a sense of spins having continuous directions.
         Since spins can have continuous directions, it is suggested the system can have topological solitons, creating vortices with discrete circulation.
         Such a phase transition is already well studied and named "Berezinskii-Kosterlitz-Thouless transition".
         <br>
         The continuous spin direction can be expressed as cosine and sine function, and flipping as reflection.
-        We don't show the spin distribution here, but spin information is stored in array in the program, so you can write them out to a file to check the topological soliton.
+        We don't show the spin distribution here, but spin information is stored in an array in the program, so you can write them out to a file to check the topological soliton.
     </p>
 </div>
 
