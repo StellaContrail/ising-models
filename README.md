@@ -1,22 +1,11 @@
 <h1> Magnetization Simulation ( 2D/3D Ising model / XY model ) </h1>
 <p>
-    金属における磁性をコンピュータシミュレーションにより再現します。
-</p>
-<p>
     Simulation of magnetization in ferromagnetic metals.
 </p>
 
 <h2> Description and Simulation Results </h2>
 <h3> 2D Ising model </h3>
 <div class="description">
-    <p>
-        Ising模型とはSpinがLattice上に均等に分布した系によって磁性をシミュレーションするモデルです。
-        Spinは半整数(-1/2, +1/2)をとり、隣り合ったSpin同士の相互作用はそれぞれのSpinベクトルの内積に相互作用の強さを記述するJ因子、および逆向きになったときにエネルギーが最大になるようにマイナス符号がかけられた形で表現されます。
-        <br>
-        シミュレーションでは全体の磁化がexp(-beta E)の重みに従って分布するように、Monte Carlo法 (Metropolis–Hastingsアルゴリズム) に従ってスピンの向きを変えます。
-        <br>
-        後にも様々な模型を紹介しますが、特にこのイジング模型と呼ばれるモデルでは簡単な割に非常によく温度による磁性の相転移を再現し、常磁性体の性質をうまくシミュレーションするモデルとなります。
-    </p>
     <p>
         Ising Model is an ideal system that consists of only 1/2 spins.
         The spins are arranged in equidistance from each other, making themselves lattice field.
@@ -68,10 +57,6 @@
 <h3> 3D Ising model </h3>
 <div class="description">
     <p>
-        先述したIsing模型は二次元のLatticeに分布したSpinをシミュレーションするモデルでしたが、このプログラムでは三次元に拡張したLattice上でシミュレーションを行っています。
-        三次元のIsing模型では厳密解が得られないことが知られており、シミュレーションの有用性を発揮させられる良い例となっています。
-    </p>
-    <p>
         As described above, the Ising model is a lattice system with 1/2 spins with an exact solution when there's no external magnetic field.
         The lattice system can be extended to a 3D lattice system, with no exact solution found ever.
         It is also a good example to show the usefulness of computer simulations in a sense of providing the approximated solution even when the exact solution doesn't exist.
@@ -107,14 +92,6 @@
 
 <h3> XY model </h3>
 <div class="description">
-    <p>
-        XY模型はこれまで紹介したIsing模型とは異なり、連続的な向きを持つスピンでLatticeが構成されているような模型です。
-        連続的な向きを持つため位相欠陥を起こしうることが考えられると思いますが、実際に低温領域においてXY模型は離散的な循環を持つ量子渦を発生させ、自発的対称性の破れを誘起させます。
-        このようなXY模型に特異的な相転移はBKT転移として既に理論面、そして実験面からも発見されています。
-        <br>
-        ここではスピンの分布についてはプロットしていませんが、スピンの情報は配列に確保してあるため、逐次データを保存することで相転移を観測することが可能です。
-        シュミレーションではスピンの向きを(cosX, sinX)として表現し、スピンをフリップさせることは鏡像操作を行うことで実現しています。
-    </p>
     <p>
         XY model is different from the Ising model, in a sense of spins having continuous directions.
         Since spins can have continuous directions, it is suggested the system can have topological solitons, creating vortices with discrete circulation.
